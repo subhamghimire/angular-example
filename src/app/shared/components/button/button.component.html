@@ -1,0 +1,9 @@
+<div *ngIf="showButton; else noButton">
+  <button [class]="color" [ngStyle]="{ backgroundColor: 'pink' }">
+    <span>{{ buttonText }}</span>
+  </button>
+</div>
+
+<ng-template #noButton>
+  <div>Sorry! No button is there!</div>
+</ng-template>
