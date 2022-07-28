@@ -12,6 +12,8 @@ export class ButtonComponent implements OnInit {
 
   public buttonText = '';
 
+  public message = 'Button not click';
+
   color: string = '';
 
   showButton = true;
@@ -24,6 +26,10 @@ export class ButtonComponent implements OnInit {
   @Input()
   set type(typeName: buttonTypes) {
     this.color = 'bg-' + typeName;
+  }
+
+  buttonClicked() {
+    this.message = 'Button clicked';
   }
 }
 

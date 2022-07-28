@@ -1,7 +1,12 @@
 <div *ngIf="showButton; else noButton">
-  <button [class]="color" [ngStyle]="{ backgroundColor: 'pink' }">
+  <button
+    [class]="color"
+    [ngStyle]="{ backgroundColor: 'pink' }"
+    (click)="buttonClicked()"
+  >
     <span>{{ buttonText }}</span>
   </button>
+  <p>{{ message }}</p>
 </div>
 
 <ng-template #noButton>
